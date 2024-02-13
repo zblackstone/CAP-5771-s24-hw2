@@ -81,9 +81,9 @@ def question2():
     # Answers are floats
     answer["(a) entropy_entire_data"] = 1.425
     # Infogain
-    answer["(b) x <= 0.2"] = 1.190
-    answer["(b) x <= 0.7"] = 1.118
-    answer["(b) y <= 0.6"] = 0.945
+    answer["(b) x < 0.2"] = 1.190
+    answer["(b) x < 0.7"] = 1.118
+    answer["(b) y < 0.6"] = 0.945
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
     answer["(c) attribute"] = "y=0.6"  
@@ -238,7 +238,7 @@ def question6():
     # Use u.BinaryTree to define the tree. Create your tree.
     # Replace "root node" by the proper node of the form "z <= float"
     tree = u.BinaryTree("x<=0.5")
-    tree.left = u.Binarytree("y<=0.4")
+    tree.left = u.BinaryTree("y<=0.4")
     tree.right = u.BinaryTree("A")
     tree.left.left = u.BinaryTree("B")
     tree.left.right = u.BinaryTree("A")
@@ -252,7 +252,7 @@ def question7():
     answer = {}
 
     # float
-    answer["a, info gain, ID"] = 1
+    answer["a, info gain, ID"] = 1.0
     answer["b, info gain, Handedness"] = 0.531
 
     # string: "ID" or "Handedness"
